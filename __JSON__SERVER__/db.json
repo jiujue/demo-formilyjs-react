@@ -1,19 +1,11 @@
 {
-  "posts": [
+  "user": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": 0,
+      "name": "jiujue",
+      "avatarUrl": "",
+      "age": 12,
+      "password": "123456"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

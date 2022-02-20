@@ -23,5 +23,8 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/prop-types': 0,
     'react/jsx-props-no-spreading': 0,
+    'no-param-reassign': 0,
+    'max-len': 0,
+    'prefer-promise-reject-errors': 0,
   },
 };

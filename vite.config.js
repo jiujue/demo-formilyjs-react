@@ -12,7 +12,7 @@ export default defineConfig({
       {
         libraryName: 'antd',
         libraryDirectory: 'es',
-        style: 'es', // or 'css'
+        style: true, // or 'css'
       },
     ],
   })],
@@ -25,7 +25,7 @@ export default defineConfig({
       // 假如你要请求https://api.*.com/a/b
       // 那么axios的url，可以配置为 /api/a/b
       '^/api': {
-        target: 'http://localhost:3000/',
+        target: 'http://localhost:8998/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
         // configure: (proxy, options) => {
@@ -46,12 +46,13 @@ export default defineConfig({
         // 支持内联 JavaScript
         javascriptEnabled: true,
         modifyVars: {
-          '@primary-color': 'gold',
+          '@primary-color': 'green',
         },
       },
     },
   },
   resolve: {
+
     alias: [
       { find: /^~/, replacement: '' },
     ],

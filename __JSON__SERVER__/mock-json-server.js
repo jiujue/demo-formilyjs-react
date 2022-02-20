@@ -31,7 +31,7 @@ const Login = (req, res) => {
         },
       )}`;
       return res.json({
-        status: 'ok',
+        code: 200,
         data: { token },
       });
     }
@@ -63,6 +63,6 @@ router.render = (req, res) => {
 
 server.use(router);
 
-server.listen(3000, () => {
-  console.log('JSON Server is running');
+server.listen(8998, () => {
+  console.log('mock server is running :', 'http://localhost:8998');
 });

@@ -9,6 +9,7 @@ import * as ICONS from '@ant-design/icons';
 import { phoneSchema, normalSchema } from './schema';
 import { VerifyCode } from './verifyCode';
 import styles from './index.module.less';
+import { LOGIN } from '../../network/user.js';
 
 const normalForm = createForm({
   validateFirst: true,
@@ -34,6 +35,7 @@ const SchemaField = createSchemaField({
 
 function Login() {
   const handleOnSubmit = (data) => {
+    LOGIN(data);
     console.log('with passwd ', data);
   };
   const handleOnSubmitWithPhone = (data) => {
@@ -43,8 +45,8 @@ function Login() {
     <div
       className={styles.wrap}
     >
-      <Card style={{ width: 400 }}>
-        <Tabs style={{ overflow: 'visible', marginTop: -10 }}>
+      <Card className={styles.card}>
+        <Tabs className={styles.table}>
           <Tabs.TabPane key="1" tab="账密登录">
             <Form
               form={normalForm}
